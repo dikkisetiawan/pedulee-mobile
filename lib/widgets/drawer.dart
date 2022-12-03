@@ -18,19 +18,20 @@ Drawer drawerBuild(BuildContext context) {
           },
         ),
         ExpansionTile(
-              title: Text("Donation"),
-              children: <Widget>[
-                ListTile(
-                  title: const Text('Money'),
-                  onTap: () {
-                    // Route menu ke counter
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MoneyDonationPage()),
-                    );
-                  },
-                ),
-              ],
+          title: const Text("Donation"),
+          children: <Widget>[
+            ListTile(
+              title: const Text('Money'),
+              onTap: () {
+                // Route menu ke counter
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MoneyDonationPage()),
+                );
+              },
+            ),
+          ],
         ),
       ],
     ),
