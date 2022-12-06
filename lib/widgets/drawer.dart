@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pedulee/home_screen.dart';
 import 'package:pedulee/main.dart';
 import 'package:pedulee/apps/money/pages/money.dart';
 
@@ -13,7 +14,7 @@ Drawer drawerBuild(BuildContext context) {
             // Route menu ke counter
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const MyHomePage()),
+              MaterialPageRoute(builder: (context) => const HomeScreen()),
             );
           },
         ),

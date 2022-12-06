@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:pedulee/widgets/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: drawerBuild(context),
         appBar: appBarWidget(),
         body: bodyWidget(context),
       ),
@@ -82,18 +84,10 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Text('Proyek Tengah Semester PBP B-10'),
+          const Text('Proyek Tengah Semester PBP B-10'),
           const SizedBox(
             height: 30,
           ),
-          titleWidget('Contributors'),
-          const SizedBox(
-            height: 20,
-          ),
-          Center(
-            child: Text(
-                'Alvin Widi Nugroho \nDaffa Muhammad Faizan \nGhayda Rafa Hernawan \nMarietha Asnat Nauli Sitompul \nRakhan Yusuf Rivesa'),
-          )
         ],
       );
 
@@ -139,14 +133,6 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.orangeAccent.shade100.withOpacity(0.5),
       title: titleWidget('Pedulee'),
       centerTitle: true,
-      actions: [
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.black54,
-            ))
-      ],
     );
   }
 
